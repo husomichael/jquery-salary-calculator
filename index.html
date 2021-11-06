@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Bonus Salary Calculator</title>
+</head>
+<header>Salary Calculator</header>
+<body>
+    <h1>Add Employee</h1>
+    <div id="add-employee-div">
+        <input type="text" placeholder="First Name" id="first-name-input">
+        <input type="text" placeholder="Last Name" id="last-name-input">
+        <input type="number" placeholder="ID" id="id-input">
+        <input type="text" placeholder="Title" id="title-input">
+        <input type="number" placeholder="Annual Salary" id="annual-salary-input">
+        <button id="submit-button">Submit</button>
+    </div>
+    <h1>Employees</h1>
+    <div id="employee-table-div">
+        <table id='employee-table'>
+            <th>
+                <tr>First Name</tr>
+                <tr>Last Name</tr>
+                <tr>ID</tr>
+                <tr>Title</tr>
+                <tr>Annual Salary</tr>
+            </th>
+            <tfoot></tfoot>
+        </table>
+    </div>
+</body>
+</html>
