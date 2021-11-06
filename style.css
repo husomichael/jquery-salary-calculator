@@ -1,14 +1,39 @@
 html{
     background-color: aquamarine;
 }
-
-tr{
+input{
+    padding-right: 20px;
+}
+tr, td, thead, tbody{
+    text-align: left;
+    border: solid black 1px;
+    padding: 20px;
+    margin: 20px;
+    font-size: larger;
+    border-style: groove;
+}
+table{
+    text-align: left;
     border: solid black 1px;
     padding: 20px;
     margin: 20px;
 }
-thead{
-    border: solid black 1px;
-    padding: 20px;
-    margin: 20px;
+#total-monthly{
+    float: right;
+}
+div{
+    text-align: center;
+}
+h1{
+    text-align: left;
+}
+header{
+    text-align: center;
+}
+#big-div{
+    width: 1000px;
+    margin: auto;
+}
+header{
+    background-color: gray;
 }

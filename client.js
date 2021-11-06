@@ -30,13 +30,16 @@ function handleSubmitButton(){
     $('#annual-salary-input').val('');
 
     handleEmployeeTable(employees);
+
+    handleTotalMonthly();
 }
 
 function handleEmployeeTable(employeesToRender){
+    let newTableRow = '';
     $('#employee-table-body').empty();
     // console.log('in handleEmployeeTable');
     for(employee of employeesToRender){
-        let newTableRow = `
+        newTableRow = `
             <tr>
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
@@ -48,4 +51,15 @@ function handleEmployeeTable(employeesToRender){
         console.log(newTableRow);
         $('#employee-table-body').append(newTableRow);
     }
+}
+
+function handleTotalMonthly(){
+    let salaryTotal = 0;
+    let salaryMonthly = 0;
+    for(employee of employees){
+        salaryTotal += employee.annualSalary;
+    }
+    salaryMonthly = (salaryTotal/12).toFixed(2);
+    $('#total-monthly').text(`Total Monthly: $${salaryMonthly}`);
+    // if(salaryMonthly >)
 }
