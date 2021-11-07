@@ -1,13 +1,13 @@
 html{
-    background-color: #efefef;
+    background-color: #EEEEEE;
     font-family: 'Roboto', sans-serif;
 }
 input{
-    border: solid black 2px;
+    border: solid #222831 2px;
     width: 18.84%;
 }
 table, td, th{
-    border: solid black 2px;
+    border: solid #222831 2px;
     border-spacing: 0px;
     border-collapse: collapse;
     table-layout: fixed;
@@ -44,7 +44,7 @@ h2{
     margin: auto;
 }
 header{
-    background-color: #384962;
+    background-color: #222831;
     padding: 4px;
     color: #FFFFFF;
 }
@@ -52,24 +52,25 @@ header{
     background-color: red;
 }
 .evenColor{
-    background-color: #FFFFFF;
+    background-color: #EEEEEE;
 }
 .oddColor{
-    background-color: #809fba;
+    background-color: #00ADB5;
 }
 .money-row{
     text-align: right;
     padding-right: 3px;
 }
 #submit-button{
-    border: solid black 2px;
+    border: solid #222831 2px;
     float: right;
     margin-top: 10px;
     width: 10%;
     height: 25px;
 }
 th{
-    background-color: #6786b1;
+    background-color: #393E46;
+    color: #FFFFFF;
 }
 .delete-button{
     margin-left: 30%;
