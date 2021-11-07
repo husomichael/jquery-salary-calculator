@@ -4,13 +4,12 @@ html{
 input{
     width: 18.88%;
 }
-table{
-    border: none;
-}
-td{
+table, td, th{
     border: solid black 1px;
     border-spacing: 0px;
     border-collapse: collapse;
+}
+td{
     text-align: left;
     padding: 20px;
     width: 1000px;

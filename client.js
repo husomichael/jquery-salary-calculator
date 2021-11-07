@@ -8,10 +8,7 @@ function readyNow(){
     $('#submit-button').on('click', handleSubmitButton);
 }
 
-
-
 ////////////////////////////////////////////////
-
 
 function handleSubmitButton(){
     let employee = {};
