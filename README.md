@@ -36,6 +36,7 @@ Clone the repository. Open index.html in a browser.
 2. Type employee inputs in the corresponding input fields.
 3. Click the submit button to add an employee to the table.
 4. If employees need to be removed, click the delete button on the row with the corresponding employee.
+5. Monthly target default $20,000. To change use the New Monthly Target input at the bottom left.
 
 ## Built With
 
