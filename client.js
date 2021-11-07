@@ -3,7 +3,7 @@ console.log('js');
 $(document).ready(readyNow);
 
 let employees = [];
-
+let globalIndex = 0;
 function readyNow(){
     $('#submit-button').on('click', handleSubmitButton);
 }
@@ -20,6 +20,7 @@ function handleSubmitButton(){
     employee.id = $('#id-input').val();
     employee.title = $('#title-input').val();
     employee.annualSalary = Number($('#annual-salary-input').val());
+    employee.indexPosition = globalIndex;
     console.log('in handleSubmitButton');
     // console.log(employee);
     employees.push(employee);
@@ -28,6 +29,7 @@ function handleSubmitButton(){
     $('#id-input').val('');
     $('#title-input').val('');
     $('#annual-salary-input').val('');
+    globalIndex ++;
 
     handleEmployeeTable(employees);
 
@@ -42,18 +44,18 @@ function handleEmployeeTable(employeesToRender){
     // console.log('in handleEmployeeTable');
     for(employee of employeesToRender){
         newTableRow = `
-            <tr id=row${employees.indexOf(employee)}>
+            <tr id=row${employee.indexPosition}>
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.id}</td>
             <td>${employee.title}</td>
             <td>${employee.annualSalary}</td>
-            <td><button class="delete-button" id=delete-button${employees.indexOf(employee)}>Delete</button></td>
+            <td><button class="delete-button" id=delete-button${employee.indexPosition}>Delete</button></td>
             </tr>
         `;
         console.log(newTableRow);
         $('#employee-table-body').append(newTableRow);
-        $(`#delete-button${employees.indexOf(employee)}`).one('click', handleDeleteButton);
+        $(`#delete-button${employee.indexPosition}`).on('click', handleDeleteButton);
     }
 }
 
@@ -66,14 +68,19 @@ function handleTotalMonthly(){
     salaryMonthly = (salaryTotal/12).toFixed(2);
     $('#total-monthly').text(`Total Monthly: $${salaryMonthly}`);
     if(salaryMonthly > 20000){
-        $('#total-monthly').addClass('red')
+        $('#total-monthly').addClass('red');
+    }else{
+        $('#total-monthly').removeClass('red');
     }
 }
 
 function handleDeleteButton(event){
-    console.log('in handleDeleteButton');
-    // console.log(event.target);
-    console.log(event.target.id.substring(13));
-    $(`#row${event.target.id.substring(13)}`).remove();
-    employees.splice(event.target.id.substring(13), 1);
+    let indexOfEmployee = event.target.id.substring(13);
+    for(let employee of employees){
+        if(indexOfEmployee == employee.indexPosition){
+            employees.splice(employees.indexOf(employee), 1);
+            $(`#row${indexOfEmployee}`).remove();
+            handleTotalMonthly();
+        }
+    }
 }
