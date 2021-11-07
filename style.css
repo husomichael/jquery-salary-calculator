@@ -1,19 +1,31 @@
 html{
-    background-color: aquamarine;
+    background-color: #efefef;
+    font-family: 'Roboto', sans-serif;
 }
 input{
-    width: 18.88%;
+    border: solid black 2px;
+    width: 18.84%;
 }
 table, td, th{
-    border: solid black 1px;
+    border: solid black 2px;
     border-spacing: 0px;
     border-collapse: collapse;
+    table-layout: fixed;
+}
+th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    width: 16.5%;
+    padding-left: 3px;
 }
 td{
     text-align: left;
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 1000px;
     margin: auto;
+    padding-left: 3px;
 }
 #total-monthly{
     float: right;
@@ -22,34 +34,46 @@ div{
     text-align: center;
 }
 h1{
-    text-align: left;
-}
-header{
     text-align: center;
+}
+h2{
+    text-align: left;
 }
 #big-div{
     width: 1000px;
     margin: auto;
 }
 header{
-    background-color: gray;
-
+    background-color: #384962;
+    padding: 4px;
+    color: #FFFFFF;
 }
 .red{
     background-color: red;
 }
 .evenColor{
-    background-color: purple;
+    background-color: #FFFFFF;
 }
 .oddColor{
-    background-color: orange;
+    background-color: #809fba;
 }
 .money-row{
     text-align: right;
+    padding-right: 3px;
 }
 #submit-button{
+    border: solid black 2px;
     float: right;
     margin-top: 10px;
     width: 10%;
     height: 25px;
+}
+th{
+    background-color: #6786b1;
+}
+.delete-button{
+    margin-left: 30%;
+}
+#tfoot{
+    padding-top: 23px;
 }

@@ -4,6 +4,7 @@ $(document).ready(readyNow);
 
 let employees = [];
 let globalIndex = 0;
+
 function readyNow(){
     $('#submit-button').on('click', handleSubmitButton);
 }
@@ -18,7 +19,7 @@ function handleSubmitButton(){
     employee.title = $('#title-input').val();
     employee.annualSalary = Number($('#annual-salary-input').val());
     employee.indexPosition = globalIndex;
-    console.log('in handleSubmitButton');
+    // console.log('in handleSubmitButton');
     // console.log(employee);
     employees.push(employee);
     $('#first-name-input').val('');
@@ -37,7 +38,6 @@ function handleEmployeeTable(){
     let newTableRow = '';
     let str = '';
     $('#employee-table-body').empty();
-    // console.log('in handleEmployeeTable');
     for(employee of employees){
         if(employees.indexOf(employee)%2 === 0){
             str = 'evenColor';
@@ -50,11 +50,10 @@ function handleEmployeeTable(){
             <td>${employee.lastName}</td>
             <td>${employee.id}</td>
             <td>${employee.title}</td>
-            <td class="money-row">${employee.annualSalary}</td>
+            <td class="money-row">$${employee.annualSalary}</td>
             <td><button class="delete-button" id=delete-button${employee.indexPosition}>Delete</button></td>
             </tr>
         `;
-        console.log(newTableRow);
         $('#employee-table-body').append(newTableRow);
         $(`#delete-button${employee.indexPosition}`).on('click', handleDeleteButton);
     }
