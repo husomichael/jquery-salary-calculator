@@ -40,12 +40,13 @@ function handleEmployeeTable(employeesToRender){
     // console.log('in handleEmployeeTable');
     for(employee of employeesToRender){
         newTableRow = `
-            <tr>
+            <tr id=row${employees.indexOf(employee)}>
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.id}</td>
             <td>${employee.title}</td>
             <td>${employee.annualSalary}</td>
+            <td><button id=delete-button${employees.indexOf(employee)}>Delete</button></td>
             </tr>
         `;
         console.log(newTableRow);

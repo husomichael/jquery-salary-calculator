@@ -4,19 +4,15 @@ html{
 input{
     padding-right: 20px;
 }
-tr, td, thead, tbody{
+table, td, th{
+    border: solid black 2px;
     text-align: left;
-    border: solid black 1px;
     padding: 20px;
-    margin: 20px;
-    font-size: larger;
-    border-style: groove;
 }
 table{
-    text-align: left;
-    border: solid black 1px;
-    padding: 20px;
-    margin: 20px;
+    width: 1000px;
+    margin: auto;
+    border: solid black 10px;
 }
 #total-monthly{
     float: right;
@@ -36,4 +32,5 @@ header{
 }
 header{
     background-color: gray;
+
 }
