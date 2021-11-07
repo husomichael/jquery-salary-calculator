@@ -4,6 +4,7 @@ $(document).ready(readyNow);
 
 let employees = [];
 let globalIndex = 0;
+let monthlyTarget = 0;
 
 function readyNow(){
     $('#submit-button').on('click', handleSubmitButton);

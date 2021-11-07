@@ -76,3 +76,16 @@ td{
     width: 1000px;
     margin: auto;
 }
+#monthly-target{
+    float: left;
+}
+#monthly-target-input{
+    float: left;
+    margin-top: 22px;
+    margin-left: 8px;
+}
+#monthly-target-button{
+    margin-top: 22px;
+    margin-left: 8px;
+    float: left;
+}
