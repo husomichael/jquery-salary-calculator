@@ -2,6 +2,20 @@ html{
     background-color: #EEEEEE;
     font-family: 'Roboto', sans-serif;
 }
+header{
+    background-color: #222831;
+    padding: 4px;
+    color: #FFFFFF;
+}
+div{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: left;
+}
 input{
     border: solid #222831 2px;
     width: 18.84%;
@@ -18,6 +32,8 @@ th{
     text-align: left;
     width: 16.5%;
     padding-left: 3px;
+    background-color: #393E46;
+    color: #FFFFFF;
 }
 td{
     text-align: left;
@@ -26,27 +42,6 @@ td{
     width: 1000px;
     margin: auto;
     padding-left: 3px;
-}
-#total-monthly{
-    float: right;
-}
-div{
-    text-align: center;
-}
-h1{
-    text-align: center;
-}
-h2{
-    text-align: left;
-}
-#big-div{
-    width: 1000px;
-    margin: auto;
-}
-header{
-    background-color: #222831;
-    padding: 4px;
-    color: #FFFFFF;
 }
 .red{
     background-color: red;
@@ -61,6 +56,9 @@ header{
     text-align: right;
     padding-right: 3px;
 }
+.delete-button{
+    margin-left: 30%;
+}
 #submit-button{
     border: solid #222831 2px;
     float: right;
@@ -68,13 +66,13 @@ header{
     width: 10%;
     height: 25px;
 }
-th{
-    background-color: #393E46;
-    color: #FFFFFF;
-}
-.delete-button{
-    margin-left: 30%;
-}
 #tfoot{
     padding-top: 23px;
+}
+#total-monthly{
+    float: right;
+}
+#big-div{
+    width: 1000px;
+    margin: auto;
 }

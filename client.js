@@ -19,8 +19,6 @@ function handleSubmitButton(){
     employee.title = $('#title-input').val();
     employee.annualSalary = Number($('#annual-salary-input').val());
     employee.indexPosition = globalIndex;
-    // console.log('in handleSubmitButton');
-    // console.log(employee);
     employees.push(employee);
     $('#first-name-input').val('');
     $('#last-name-input').val('');
