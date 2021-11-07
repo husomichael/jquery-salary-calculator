@@ -20,11 +20,11 @@ When adding or removing an employee, a function is ran to calculate the current 
 
 When the total monthly value is over the desired budget, a css class is added to alert this with a red background. The class is removed when the total monthly value goes back under the desired budget.
 
-
+Monthly target is displayed on the DOM, next to a monthly target input, and a submit button. A new monthly target can be submitted to the user's desire and will update the red background alert, and display the current monthly target.
 
 ## Screenshot
 
-![App-Screenshot](calculator-screenshot.png)
+![App-Screenshot](calculator-screenshot.png) (Not shown: monthly target, monthly target input, monthly target submit button)
 
 ## Installation
 

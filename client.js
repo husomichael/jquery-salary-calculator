@@ -4,10 +4,11 @@ $(document).ready(readyNow);
 
 let employees = [];
 let globalIndex = 0;
-let monthlyTarget = 0;
+let monthlyTarget = 20000;
 
 function readyNow(){
     $('#submit-button').on('click', handleSubmitButton);
+    $('#monthly-target-button').on('click', handleMonthlyTargetButton);
 }
 
 ////////////////////////////////////////////////
@@ -66,7 +67,7 @@ function handleTotalMonthly(){
     }
     salaryMonthly = (salaryTotal/12);
     $('#total-monthly').text(`Total Monthly: ${"$"+Number((salaryMonthly).toFixed(1)).toLocaleString()}`);
-    if(salaryMonthly > 20000){
+    if(salaryMonthly > monthlyTarget){
         $('#total-monthly').addClass('red');
     }else{
         $('#total-monthly').removeClass('red');
@@ -83,4 +84,12 @@ function handleDeleteButton(event){
             handleEmployeeTable();
         }
     }
+}
+
+function handleMonthlyTargetButton(){
+    let monthlyInput = $('#monthly-target-input').val();
+    monthlyTarget = Number(monthlyInput);
+    $('#monthly-target').text(`Monthly Target: ${"$"+Number((monthlyTarget).toFixed(1)).toLocaleString()}`);
+    $('#monthly-target-input').val('');
+    handleTotalMonthly();
 }
