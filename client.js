@@ -50,7 +50,7 @@ function handleEmployeeTable(){
             <td>${employee.lastName}</td>
             <td>${employee.id}</td>
             <td>${employee.title}</td>
-            <td class="money-row">$${employee.annualSalary}</td>
+            <td class="money-row">${"$"+Number((employee.annualSalary).toFixed(1)).toLocaleString()}</td>
             <td><button class="delete-button" id=delete-button${employee.indexPosition}>Delete</button></td>
             </tr>
         `;
@@ -65,8 +65,8 @@ function handleTotalMonthly(){
     for(employee of employees){
         salaryTotal += employee.annualSalary;
     }
-    salaryMonthly = (salaryTotal/12).toFixed(2);
-    $('#total-monthly').text(`Total Monthly: $${salaryMonthly}`);
+    salaryMonthly = (salaryTotal/12);
+    $('#total-monthly').text(`Total Monthly: ${"$"+Number((salaryMonthly).toFixed(1)).toLocaleString()}`);
     if(salaryMonthly > 20000){
         $('#total-monthly').addClass('red');
     }else{
