@@ -24,7 +24,7 @@ Monthly target is displayed on the DOM, next to a monthly target input, and a su
 
 ## Screenshot
 
-![App-Screenshot](calculator-screenshot.png) (Not shown: monthly target, monthly target input, monthly target submit button)
+![App-Screenshot](calculator-screenshot.png)
 
 ## Installation
 
