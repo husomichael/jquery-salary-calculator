@@ -31,25 +31,29 @@ function handleSubmitButton(){
     $('#annual-salary-input').val('');
     globalIndex ++;
 
-    handleEmployeeTable(employees);
+    handleEmployeeTable();
 
     handleTotalMonthly();
-
-
 }
 
-function handleEmployeeTable(employeesToRender){
+function handleEmployeeTable(){
     let newTableRow = '';
+    let str = '';
     $('#employee-table-body').empty();
     // console.log('in handleEmployeeTable');
-    for(employee of employeesToRender){
+    for(employee of employees){
+        if(employees.indexOf(employee)%2 === 0){
+            str = 'evenColor';
+        }else{
+            str = 'oddColor';
+        }
         newTableRow = `
-            <tr id=row${employee.indexPosition}>
+            <tr class="${str}" id=row${employee.indexPosition}>
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.id}</td>
             <td>${employee.title}</td>
-            <td>${employee.annualSalary}</td>
+            <td class="money-row">${employee.annualSalary}</td>
             <td><button class="delete-button" id=delete-button${employee.indexPosition}>Delete</button></td>
             </tr>
         `;
@@ -81,6 +85,7 @@ function handleDeleteButton(event){
             employees.splice(employees.indexOf(employee), 1);
             $(`#row${indexOfEmployee}`).remove();
             handleTotalMonthly();
+            handleEmployeeTable();
         }
     }
 }

@@ -2,17 +2,19 @@ html{
     background-color: aquamarine;
 }
 input{
-    padding-right: 20px;
-}
-table, td, th{
-    border: solid black 2px;
-    text-align: left;
-    padding: 20px;
+    width: 18.88%;
 }
 table{
+    border: none;
+}
+td{
+    border: solid black 1px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 20px;
     width: 1000px;
     margin: auto;
-    border: solid black 10px;
 }
 #total-monthly{
     float: right;
@@ -36,4 +38,19 @@ header{
 }
 .red{
     background-color: red;
+}
+.evenColor{
+    background-color: purple;
+}
+.oddColor{
+    background-color: orange;
+}
+.money-row{
+    text-align: right;
+}
+#submit-button{
+    float: right;
+    margin-top: 10px;
+    width: 10%;
+    height: 25px;
 }

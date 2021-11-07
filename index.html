@@ -11,7 +11,9 @@
 
     <title>Bonus Salary Calculator</title>
 </head>
-<header>Salary Calculator</header>
+<header>
+    <h1>Salary Calculator</h1>
+</header>
 <body>
     <h1>Add Employee</h1>
     <div id="add-employee-div">
@@ -20,20 +22,23 @@
         <input type="number" placeholder="ID" id="id-input">
         <input type="text" placeholder="Title" id="title-input">
         <input type="number" placeholder="Annual Salary" id="annual-salary-input">
+    </div>
+    <div>
         <button id="submit-button">Submit</button>
     </div>
     <h1>Employees</h1>
     <div id="employee-table-div">
         <table>
-            <th>
-                <tr>First Name</tr>
-                <tr>Last Name</tr>
-                <tr>ID</tr>
-                <tr>Title</tr>
-                <tr>Annual Salary</tr>
-            </th>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+                <th></th>
+            </tr>
             <tbody id="employee-table-body"></tbody>
-            <tfoot></tfoot>
+            <td colspan=6></td>
         </table>
         <h1 id="total-monthly">Total Monthly: $0</h1>
     </div>
